@@ -10,18 +10,16 @@ class MyLexer {
   }
 
   tokenize(str) {
-    if (str) {
-      this.buf = new MyBuffer(str)
-      this.tokens.splice(0)
-    }
+    this.tokens.splice(0)
+    let buf = new MyBuffer(str)
 
-    while (this.buf.exist()) {
-      if (/\d/.test(this.buf.read())) {
-        this.tokens.push(this.getlex_number(this.buf))
-      } else if (/[\+\-]/.test(this.buf.read())) {
-        this.tokens.push(this.getlex_symbol(this.buf))
+    while (buf.exist()) {
+      if (/\d/.test(buf.read())) {
+        this.tokens.push(this.getlex_number(buf))
+      } else if (/[\+\-]/.test(buf.read())) {
+        this.tokens.push(this.getlex_symbol(buf))
       } else {
-        this.buf.next()
+        buf.next()
       }
     }
 
