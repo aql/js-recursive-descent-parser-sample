@@ -29,5 +29,5 @@ const expression = (str) => {
   return result
 }
 
-let input = process.argv[2]
+const input = process.argv[2]
 console.log(input, '=', expression(input))
