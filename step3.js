@@ -1,9 +1,9 @@
-let tokenize = (str) => {
+const tokenize = (str) => {
   return str.split(/\s+/)
 }
 
-let expression = (str) => {
-  let tokens = tokenize(str)
+const expression = (str) => {
+  const tokens = tokenize(str)
   let idx = 0;
 
   let result = 1

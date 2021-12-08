@@ -1,8 +1,8 @@
-let MyLang = require('./MyLang.js')
+const MyLang = require('./MyLang.js')
 
-let lang = new MyLang()
+const lang = new MyLang()
 
-let tests = [{
+const tests = [{
     input: '1 + 2',
     expect: 3
   },
@@ -21,7 +21,7 @@ let tests = [{
 ]
 
 for (let test of tests) {
-  let result = lang.exec(test.input)
+  const result = lang.exec(test.input)
   console.log(
     result === test.expect ? '[OK]' : '[NG]',
     test.input, '=', result

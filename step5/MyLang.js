@@ -1,4 +1,4 @@
-let MyLexer = require('./MyLexer.js')
+const MyLexer = require('./MyLexer.js')
 
 class MyLang {
   constructor() {}

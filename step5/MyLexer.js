@@ -1,4 +1,4 @@
-let MyBuffer = require('./MyBuffer.js')
+const MyBuffer = require('./MyBuffer.js')
 
 class MyLexer {
   constructor(str) {
@@ -11,7 +11,7 @@ class MyLexer {
 
   tokenize(str) {
     this.tokens.splice(0)
-    let buf = new MyBuffer(str)
+    const buf = new MyBuffer(str)
 
     while (buf.exist()) {
       if (/\d/.test(buf.read())) {

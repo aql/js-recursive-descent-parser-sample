@@ -1,9 +1,9 @@
-let tokenize = (str) => {
+const tokenize = (str) => {
   return str.split(/\s+/)
 }
 
-let expression = (str) => {
-  let tokens = tokenize(str)
+const expression = (str) => {
+  const tokens = tokenize(str)
   let idx = 0;
   let result = Number(tokens[idx++])
   while ( tokens[idx++] === '+' ) {
@@ -12,5 +12,5 @@ let expression = (str) => {
   return result
 }
 
-let input = process.argv[2]
+const input = process.argv[2]
 console.log(input, '=', expression(input))

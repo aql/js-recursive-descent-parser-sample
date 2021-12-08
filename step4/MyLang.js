@@ -10,7 +10,7 @@ class MyLang {
   }
 
   expression(str) {
-    let tokens = this.tokenize(str)
+    const tokens = this.tokenize(str)
     let idx = 0;
 
     let result = 1
